@@ -8,7 +8,9 @@ This uses [oidc-client-ts](https://github.com/authts/oidc-client-ts) package to 
 
 ## Create Affinidi Login Configuration
 
-1. Create Login Configuration using our Developer portal by following the instructions [here](https://docs.affinidi.com/docs/affinidi-login/login-configuration/#using-affinidi-portal) with the below settings
+Create Login Configuration using our Developer portal by following the instructions [here](https://docs.affinidi.com/docs/affinidi-login/login-configuration/#using-affinidi-portal) with the below settings
+
+_Important_ : Post Login configuration, Copy CLIENT_ID & ISSUER which will be used in later steps
 
 - `Name` as `OIDC Test`
 - `Redirect URIs` as `http://localhost:3000/index.html`
@@ -160,11 +162,18 @@ This uses [oidc-client-ts](https://github.com/authts/oidc-client-ts) package to 
 
 ## Update Code with Configuration
 
-1. Open file [sample-settings.js](./public/sample-settings.js)
+1. Create `.env` file by using below command
 
-2. Paste CLIENT_ID & ISSUER in above file
+```
+cp .env.example .env
+```
 
-**Note**: Discovering metadata by `oidc-client-ts` library giving CORS error, as Workaround - Copy the contents for the issuer URL and paste it under metadata attribute
+2. Paste your CLIENT_ID & ISSUER generated from previous step, Should look like below
+
+```
+PROVIDER_CLIENT_ID="xxxxxx-xxxx-xxxx-xxx-xxxxxxx"
+PROVIDER_ISSUER="https://xxxxxxx-yyyy-yyyy-xxxx-xxxxxxx.apse1.login.affinidi.io"
+```
 
 ## Install & Run
 
@@ -172,4 +181,5 @@ This uses [oidc-client-ts](https://github.com/authts/oidc-client-ts) package to 
 npm install
 npm start
 ```
+
 Open [http://localhost:3000](http://localhost:3000)
