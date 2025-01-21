@@ -3,10 +3,8 @@
 This uses [oidc-client-ts](https://github.com/authts/oidc-client-ts) package to do OAuth2 using PKCE flow.
 
 ## Sneak Peak
-<video width="320" height="240" controls>
-  <source src="./public/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+![GIF Preview](./public/demo.gif)
 
 ## Create Affinidi Login Configuration
 
