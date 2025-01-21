@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth2 Flow with oidc-client-ts</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Node Program for OAuth2 flow using oidc-client-ts</h1>
+        <p>
+            This uses <a href="https://github.com/authts/oidc-client-ts" target="_blank">oidc-client-ts</a> package to
+            do OAuth2 using PKCE flow.
+        </p>
+        <button id="signin" class="affinidi-login affinidi-login-m">
+            Affinidi Login
+        </button>
+        <p style="text-align: left;padding-top: 2rem;">Output</p>
+        <pre style="text-align: left;overflow: auto;" id="out"></pre>
+    </div>
+
+
+    <script type="module" src="sample.js"></script>
+</body>
+
+</html>
